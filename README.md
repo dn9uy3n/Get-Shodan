@@ -46,6 +46,11 @@ Install the library package:
 ```
 root@kali:~# pip install argparse shodan
 ```
+Download tool:
+
+```
+root@kali:~# git clone https://github.com/dn9uy3n/Get-Shodan
+```
 
 Get Shodan API key: Login to https://www.shodan.io >> 'My Account' >> Copy API Key
 
