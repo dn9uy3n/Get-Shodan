@@ -32,4 +32,28 @@ optional arguments:
 
 ```
 
-### 1. Install:
+### 1. Install & Prepare:
+Install the library package:
+
+```
+root@kali:~# pip istall argparse shodan
+```
+
+Get Shodan API key: Login to https://www.shodan.io >> 'My Account' >> Copy API Key
+
+### 2. Run:
+Example: Download IP list of Apache server opens port 8080 and OS: Windows Server 2003. Save in out.txt
+
+```
+root@kali:~# python getShodan.py -q 'apache port:"8080" os:"Windows Server 2003"' -k EIKDQTZkFDY6MzXdrflLlXXXXXXXXXX -o out.txt -f ip_str
+```
+
+Open out.txt file:
+```
+ip_str 116.211.11.111;
+ip_str 173.239.37.150;
+ip_str 136.142.245.117;
+ip_str 89.31.96.48;
+ip_str 60.248.227.26;
+...
+```
