@@ -1,5 +1,12 @@
 # Get-Shodan
-The program allows to download large data from shodan quickly, simply and avoid errors.
+```
+Shodan is a search engine that lets the user find specific types of computers (webcams, routers, servers, etc.) connected to the internet using a variety of filters. Some have also described it as a search engine of service banners, which are metadata that the server sends back to the client.[1] This can be information about the server software, what options the service supports, a welcome message or anything else that the client can find out before interacting with the server. (wikipeida)
+```
+Downloading data in the usual way from shodan will have some difficulties such as:
+ - Excessive download data (you must refine the necessary data from the json string list)
+ - Disconnect during download
+ - Long wait time
+This tool will help you fix all that
 
 ```
 root@kali:~/getShodan# python getShodan.py -h
@@ -36,7 +43,7 @@ optional arguments:
 Install the library package:
 
 ```
-root@kali:~# pip istall argparse shodan
+root@kali:~# pip install argparse shodan
 ```
 
 Get Shodan API key: Login to https://www.shodan.io >> 'My Account' >> Copy API Key
