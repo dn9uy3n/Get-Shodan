@@ -44,7 +44,7 @@ optional arguments:
 Install the library package:
 
 ```
-root@kali:~# pip install argparse shodan
+root@kali:~# pip install -r requitements.txt
 ```
 Download tool:
 
