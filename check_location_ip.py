@@ -1,6 +1,7 @@
 import shodan
+from configure import SHODAN_API
 
-api = shodan.Shodan('YhbjtVMFCVYvAlJ5VUwmyo7lsw6NQ2wA')
+api = shodan.Shodan(SHODAN_API)
 
 host = api.host('121.180.25.183')
 
