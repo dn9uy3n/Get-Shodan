@@ -77,3 +77,15 @@ ip_str 89.31.96.48;
 ip_str 60.248.227.26;
 ...
 ```
+
+### 3. Get location from IP:
+Get the resulting IP location from shodan:
+
+'''
+$ python check_location_ip.py 91.177.226.21
+...
+longitude: 4.3337
+latitude: 50.8336
+Google maps: https://maps.google.com/?q=50.8336,4.3337
+
+'''
