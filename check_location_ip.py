@@ -1,11 +1,16 @@
 import shodan
 from configure import SHODAN_API
+import argparse
+import sys
 
-api = shodan.Shodan(SHODAN_API)
+def main():
+    api = shodan.Shodan(SHODAN_API)
 
-host = api.host('121.180.25.183')
+    host = api.host(str(sys.argv[1]))
 
-print host
+    print host
 
-print "longitude: " + str(host['longitude'])
-print "latitude: " + str(host['latitude'])
+    print "longitude: " + str(host['longitude'])
+    print "latitude: " + str(host['latitude'])
+
+    print "Google maps: https://maps.google.com/?q=<" + str(host['longitude']) + ">,<" + str(host['latitude']) + ">"

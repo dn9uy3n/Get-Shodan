@@ -78,7 +78,7 @@ def main():
             print e
             print "The program will continue for 10 seconds..."
             time.sleep(10)
-    
+
     f.close()
 
     print("Done! :)")

@@ -53,6 +53,13 @@ root@kali:~# git clone https://github.com/dn9uy3n/Get-Shodan
 ```
 
 Get Shodan API key: Login to https://www.shodan.io >> 'My Account' >> Copy API Key
+Add Shodan API key to configure.py file
+
+'''
+...
+SHODAN_API = <your_API_key>
+...
+'''
 
 ### 2. Run:
 Example: Download IP list of Apache server opens port 8080 and OS: Windows Server 2003. Save in out.txt
