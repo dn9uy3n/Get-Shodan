@@ -1,6 +1,7 @@
 import argparse
 import shodan
 import time
+from configure import SHODAN_API
 
 def filter(result, filter_str, f):
     filter_list = filter_str.split('/')
@@ -22,7 +23,6 @@ def main():
     try:
         parser = argparse.ArgumentParser(description= "get data from Shodan")
         parser.add_argument("-q", "--query", type = str, metavar = "<\'string query\'>", help = "String query search on Shodan", required=True)
-        parser.add_argument("-k", "--key", type = str, metavar = "<shodan_API_key>", help = "API key in Shodan", required=True)
         parser.add_argument("-o", "--output", type = str, metavar = "<output file>", help = "Output file", required=True)
         parser.add_argument("-f", "--filter", type = str, metavar = "ip_str/port/os/host/", help = "Filer string", required=True)
         parser.add_argument("-os", "--offset", type = int, metavar = "<offet_number>", help = "The serial number of result will begin downloading")
@@ -32,13 +32,12 @@ def main():
 
     args = parser.parse_args()
     query = args.query
-    key = args.key
     filter_str = args.filter
     file_str = args.output
     offset = args.offset
     limit_ = args.limit
 
-    api = shodan.Shodan(key)
+    api = shodan.Shodan(SHODAN_API)
     result_number = api.count(query)
     total = result_number['total']
 
@@ -79,7 +78,7 @@ def main():
             print e
             print "The program will continue for 10 seconds..."
             time.sleep(10)
-    
+
     f.close()
 
     print("Done! :)")
