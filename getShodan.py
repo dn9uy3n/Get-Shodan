@@ -10,7 +10,7 @@ def filter(result, filter_str, f):
         for ft in filter_list:
             # print ft
             # print r[ft]
-            tmp_str += ft + ' ' + str(r[ft]) + ';'
+            tmp_str += str(r[ft]) + ';'
         f.write(tmp_str + '\n')
 
 def main():
