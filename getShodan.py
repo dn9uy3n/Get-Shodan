@@ -11,7 +11,7 @@ def filter(result, filter_str, f):
             # print ft
             # print r[ft]
             tmp_str += str(r[ft]) + ';'
-        f.write(tmp_str + '\n')
+        f.write(tmp_str[:-1] + '\n')
 
 def main():
     print   """  ____      _     ____  _               _             

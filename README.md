@@ -76,11 +76,11 @@ root@kali:~# python getShodan.py -q 'apache port:"8080" os:"Windows Server 2003"
 
 Open out.txt file:
 ```
-ip_str 116.211.11.111;
-ip_str 173.239.37.150;
-ip_str 136.142.245.117;
-ip_str 89.31.96.48;
-ip_str 60.248.227.26;
+116.211.11.111
+173.239.37.150
+136.142.245.117
+89.31.96.48
+60.248.227.26
 ...
 ```
 
