@@ -61,14 +61,14 @@ def main():
             if( tmp_limit < 1000):
                 result = api.search(query, offset = cnt, limit = tmp_limit)
                 check = 0
-                filter(result, filter_str, f)
                 print "download %d/%d" %(cnt + tmp_limit,total)
+                filter(result, filter_str, f)
                 break
             result = api.search(query, limit=1000, offset=cnt)
             check = 0
-            filter(result, filter_str, f)
             cnt += 1000
             print "download %d/%d" %(cnt,total)
+            filter(result, filter_str, f)
         except shodan.exception.APIError as e:
             check += 1
             if(check > 10):
