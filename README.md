@@ -27,8 +27,6 @@ optional arguments:
   -h, --help            show this help message and exit
   -q <'string query'>, --query <'string query'>
                         String query search on Shodan
-  -k <shodan_API_key>, --key <shodan_API_key>
-                        API key in Shodan
   -o <output file>, --output <output file>
                         Output file
   -f ip_str/port/os/host/, --filter ip_str/port/os/host/
@@ -55,17 +53,25 @@ root@kali:~# git clone https://github.com/dn9uy3n/Get-Shodan
 Get Shodan API key: Login to https://www.shodan.io >> 'My Account' >> Copy API Key
 Add Shodan API key to configure.py file
 
+<<<<<<< HEAD
 '''
 ...
 SHODAN_API = <your_API_key>
 ...
 '''
+=======
+```
+...
+SHODAN_API = <your_API_key>
+...
+```
+>>>>>>> 4e33ff7cb09aae73198f3ad3e83963c611a11f2a
 
 ### 2. Run:
 Example: Download IP list of Apache server opens port 8080 and OS: Windows Server 2003. Save in out.txt
 
 ```
-root@kali:~# python getShodan.py -q 'apache port:"8080" os:"Windows Server 2003"' -k EIKDQTZkFDY6MzXdrflLlXXXXXXXXXX -o out.txt -f ip_str
+root@kali:~# python getShodan.py -q 'apache port:"8080" os:"Windows Server 2003"' -o out.txt -f ip_str
 ```
 
 Open out.txt file:
@@ -81,11 +87,19 @@ ip_str 60.248.227.26;
 ### 3. Get location from IP:
 Get the resulting IP location from shodan:
 
+<<<<<<< HEAD
 '''
+=======
+```
+>>>>>>> 4e33ff7cb09aae73198f3ad3e83963c611a11f2a
 $ python check_location_ip.py 91.177.226.21
 ...
 longitude: 4.3337
 latitude: 50.8336
 Google maps: https://maps.google.com/?q=50.8336,4.3337
 
+<<<<<<< HEAD
 '''
+=======
+```
+>>>>>>> 4e33ff7cb09aae73198f3ad3e83963c611a11f2a
