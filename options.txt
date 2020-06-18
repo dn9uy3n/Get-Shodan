@@ -1,10 +1,12 @@
 ip_str
 port
 os
-host
-module
 org
 isp
-hostname
 asn
-
+location.city
+location.region_code
+location.country_name
+location.country_code
+location.longitude
+location.latitude

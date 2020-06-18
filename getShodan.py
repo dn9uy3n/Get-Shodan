@@ -10,7 +10,11 @@ def filter(result, filter_str, f):
         for ft in filter_list:
             # print ft
             # print r[ft]
-            tmp_str += str(r[ft]) + ';'
+            if 'location' == ft[:8]:
+                lo = r['location']
+                tmp_str += str(lo[ft[9:]])
+            else:
+                tmp_str += str(r[ft]) + ';'
         f.write(tmp_str[:-1] + '\n')
 
 def main():
