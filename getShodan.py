@@ -2,6 +2,7 @@ import argparse
 import shodan
 import time
 from configure import SHODAN_API
+from django.utils.encoding import smart_str
 
 def filter(result, filter_str, f):
     filter_list = filter_str.split('/')
@@ -10,11 +11,15 @@ def filter(result, filter_str, f):
         for ft in filter_list:
             # print ft
             # print r[ft]
-            if 'location' == ft[:8]:
-                lo = r['location']
-                tmp_str += str(lo[ft[9:]])
-            else:
-                tmp_str += str(r[ft]) + ';'
+            try:
+                if 'location' == ft[:8]:
+                    lo = r['location']
+                    tmp_str += smart_str(lo[ft[9:]])
+                else:
+                    tmp_str += smart_str(r[ft]) + ';'
+            except Exception as e:
+                print(e)
+                tmp_str += ';'
         f.write(tmp_str[:-1] + '\n')
 
 def main():
