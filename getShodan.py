@@ -14,7 +14,7 @@ def filter(result, filter_str, f):
             try:
                 if 'location' == ft[:8]:
                     lo = r['location']
-                    tmp_str += smart_str(lo[ft[9:]])
+                    tmp_str += smart_str(lo[ft[9:]]) + ';'
                 else:
                     tmp_str += smart_str(r[ft]) + ';'
             except Exception as e:
