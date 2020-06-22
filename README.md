@@ -61,8 +61,7 @@ Add Shodan API key to configure.py file
 ...
 SHODAN_API = <your_API_key>
 ...
-'''
-=======
+
 ```
 ...
 SHODAN_API = <your_API_key>
@@ -91,8 +90,7 @@ Open out.txt file:
 Get the resulting IP location from shodan:
 
 
-'''
-=======
+
 ```
 
 $ python check_location_ip.py 91.177.226.21
@@ -102,6 +100,4 @@ latitude: 50.8336
 Google maps: https://maps.google.com/?q=50.8336,4.3337
 
 
-'''
-=======
 ```
