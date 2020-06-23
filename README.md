@@ -57,11 +57,6 @@ Get Shodan API key: Login to https://www.shodan.io >> 'My Account' >> Copy API K
 Add Shodan API key to configure.py file
 
 
-'''
-...
-SHODAN_API = <your_API_key>
-...
-
 ```
 ...
 SHODAN_API = <your_API_key>
